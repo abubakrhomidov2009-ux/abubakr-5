@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-cyan-50: oklch(98.4% 0.019 200.873);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -169,11 +170,26 @@
   .m-auto {
     margin: auto;
   }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .table {
     display: table;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-100 {
     width: calc(var(--spacing) * 100);
@@ -183,6 +199,9 @@
   }
   .w-\[90\] {
     width: 90;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .max-w-300 {
     max-width: calc(var(--spacing) * 300);
@@ -204,6 +223,18 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -227,11 +258,53 @@
   .bg-\[\#8BAC3E\] {
     background-color: #8BAC3E;
   }
+  .bg-\[\#8da9ff\] {
+    background-color: #8da9ff;
+  }
+  .bg-\[\#8ee9f7\] {
+    background-color: #8ee9f7;
+  }
+  .bg-\[\#E6F3F5\] {
+    background-color: #E6F3F5;
+  }
+  .bg-\[\#EAEEFA\] {
+    background-color: #EAEEFA;
+  }
+  .bg-\[\#F0FEEB\] {
+    background-color: #F0FEEB;
+  }
+  .bg-\[\#F3F7D9\] {
+    background-color: #F3F7D9;
+  }
+  .bg-\[\#F9EEF3\] {
+    background-color: #F9EEF3;
+  }
+  .bg-\[\#a1f384\] {
+    background-color: #a1f384;
+  }
+  .bg-\[\#c5fab2\] {
+    background-color: #c5fab2;
+  }
+  .bg-\[\#eaf796\] {
+    background-color: #eaf796;
+  }
+  .bg-\[\#ffacd1\] {
+    background-color: #ffacd1;
+  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .px-15 {
+    padding-inline: calc(var(--spacing) * 15);
+  }
+  .px-20 {
+    padding-inline: calc(var(--spacing) * 20);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -244,6 +317,9 @@
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-\[50px\] {
     font-size: 50px;
@@ -261,9 +337,47 @@
   .underline {
     text-decoration-line: underline;
   }
+  .inset-ring-cyan-50 {
+    --tw-inset-ring-color: var(--color-cyan-50);
+  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .lg\:m-0 {
+    @media (width >= 64rem) {
+      margin: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
+    }
+  }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
+  .lg\:w-100 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 100);
+    }
+  }
+  .lg\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
+    }
+  }
+  .lg\:justify-end {
+    @media (width >= 64rem) {
+      justify-content: flex-end;
+    }
+  }
+  .lg\:justify-start {
+    @media (width >= 64rem) {
+      justify-content: flex-start;
+    }
   }
 }
 @property --tw-border-style {
