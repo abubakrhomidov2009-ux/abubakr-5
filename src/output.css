@@ -7,8 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --font-weight-bold: 700;
     --radius-2xl: 1rem;
     --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
@@ -173,6 +175,9 @@
   .table {
     display: table;
   }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
+  }
   .w-\[90\%\] {
     width: 90%;
   }
@@ -188,11 +193,20 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .items-center {
     align-items: center;
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -213,6 +227,9 @@
   .bg-\[\#8BAC3E\] {
     background-color: #8BAC3E;
   }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -227,6 +244,16 @@
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .text-\[50px\] {
+    font-size: 50px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-\[\#8BAC3E\] {
+    color: #8BAC3E;
   }
   .text-white {
     color: var(--color-white);
@@ -244,6 +271,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -253,6 +284,7 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-font-weight: initial;
       --tw-outline-style: solid;
     }
   }
