@@ -9,10 +9,12 @@
       "Courier New", monospace;
     --color-cyan-50: oklch(98.4% 0.019 200.873);
     --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-bold: 700;
     --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -185,6 +187,9 @@
   .table {
     display: table;
   }
+  .w-\[09\%\] {
+    width: 09%;
+  }
   .w-\[90\%\] {
     width: 90%;
   }
@@ -194,8 +199,14 @@
   .w-fit {
     width: fit-content;
   }
+  .max-w-200 {
+    max-width: calc(var(--spacing) * 200);
+  }
   .max-w-300 {
     max-width: calc(var(--spacing) * 300);
+  }
+  .max-w-400 {
+    max-width: calc(var(--spacing) * 400);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -230,12 +241,25 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-3 {
+    border-style: var(--tw-border-style);
+    border-width: 3px;
+  }
+  .border-black {
+    border-color: var(--color-black);
   }
   .bg-\[\#\#F3F7D9\] {
     background-color: ##F3F7D9;
@@ -336,6 +360,12 @@
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -413,9 +443,29 @@
       display: flex;
     }
   }
+  .lg\:w-10 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:w-80 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 80);
+    }
+  }
+  .lg\:w-95 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 95);
+    }
+  }
   .lg\:w-100 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 100);
+    }
+  }
+  .lg\:w-105 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 105);
     }
   }
   .lg\:w-fit {
